@@ -1,0 +1,328 @@
+<html>
+
+<head>
+    <!-- *****  This is a meta section  *****  -->
+
+    <meta charset="UTF-8">
+    <meta name="description" content=" Content for HTML,CSS,Bootstrap,javascript">
+    <meta name="keywords" content="html,css,bootstap,javascript,html and css,ag acadmy,ag">
+    <meta name="author" content="Abhishek Garg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- *****  This is a fontawosme section  *****  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CDN  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- *** This is Favicon Image section ***-->
+
+    <link rel="shortcut icon" href="img/logo/images (2).jfif" type="image/x-icon">
+
+    <!-- css link section  -->
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/professional_details.css">
+    <link rel="stylesheet" href="css/address.css">
+    <link rel="stylesheet" href="css/declaration.css">
+    <!-- *** This is script section ***-->
+    <script src="js/header-footer.js"></script>
+
+
+</head>
+<script>
+    var pages = {
+        'personal': `<div class="registration">
+        <div class="row">
+            <div class="col-3">
+                <img src="img/page/images (1).jfif" alt="">
+            </div>
+            <div class="col">
+                <form method="post" action="professional_details.html">
+                    <div class="container mt-3 m-auto">
+                        <label>Applicant's Name</label>
+                        <input type="text" id="uname" placeholder="Enter your Name">
+                        <div class="error" id="error-username"></div>
+                        
+                        <label>Father's Name</label>
+                        <input type="text" id="fname" placeholder="Enter your Father's Name">
+                        <div class="error" id="error-fname"></div>
+                        
+                        <label>Mother's Name</label>
+                        <input type="text" id="mname" placeholder="Enter your Mother's Name">
+                        <div class="error" id="error-mname"></div>
+                        
+                        <label>Email ID</label>
+                        <input type="email" id="email" placeholder="Please enter your Emailid">
+                        <div class="error" id="error-email"></div>
+
+
+                        
+
+                        <label>Phone NO.</label>
+                        <input type="number" id="phone" placeholder="Please enter your Phone No.">
+                        <div class="error" id="error-phone"></div>
+
+                        
+                        <label>Gender</label>
+
+                        <input type="radio" id="gender" name="gender" value="Male">
+                        <label for="Male">Male</label>
+                        <input type="radio" id="gender" name="gender" value="Female">
+                        <label for="Female">Female</label>
+                        <div class="error" id="error-gender"></div>
+
+                        
+                        <label>Date of Birth</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+
+                        
+                        <label>Matrial Status</label>
+
+                        <input type="radio" id="status" name="status" value="Unmarried">
+                        <label for="Unmarried">Unmarried</label>
+                        <input type="radio" id="status" name="status" value="Married">
+                        <label for="Married">Married</label>
+
+
+                        
+                        <label>Nationality</label>
+                        <input type="text" id="nationality" placeholder="Enter your Natinality">
+                        <div class="error" id="error-nationality"></div>
+                        
+
+                        <label>Religion</label>
+                        <input type="text" id="religion" placeholder="Enter your Religion">
+                        <div class="error" id="error-religion"></div>
+                        
+                        <input type="button" id="button" value="Submit" onclick="formsubmittion1()">
+                      
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>`,
+        'educational': `<div class="registration1">
+        <h1>Education Details</h1>
+        <div class="row">
+            <div class="col-3">
+                <img src="img/page/images (1).jfif" alt="">
+            </div>
+            <div class="col">
+                <form method="post">
+                    <div class="container mt-3 m-auto">
+
+                        <label>Education </label>
+                        <select>
+                            <option disabled=disabled>Select Your Education Level</option>
+                            <option>10th</option>
+                            <option>12th</option>
+                            <option>Graducation</option>
+                            <option>Master</option>
+                           
+                        </select>
+                        <br>
+                        <label>University/Board Name</label>
+                        <input type="text" id="board" placeholder="Enter your University/Board Name">
+                        <div class="error" id="error-board"></div>
+                        
+
+
+                        <label>Marks Obtained</label>
+                        <input type="number" id="marks" placeholder="Enter your Marks Obtained">
+                        <div class="error" id="error-marks"></div>
+                        
+
+                        <label>Total Marks</label>
+                        <input type="number" id="totalmarks" placeholder="Enter your total marks">
+                        <div class="error" id="error-totalmarks"></div>
+                        
+
+                        <label>Percentage obtained </label>
+                        <input type="number" id="Percentage" placeholder="Enter yourPercentage obtained ">
+                        <div class="error" id="error-Percentage"></div>
+                        
+                        <label>Date of Marksheet</label>
+                        <input type="date" id="dom" name="dom" required>
+
+                        
+                        <input type="button" id="button" value="Submit" onclick="formsubmittion2()">
+                        
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>`,
+        'address': `<div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-primary">Permanent Address</h3>
+                <p>Enter permanent address as your Identity card</p>
+
+                <!--=== Permanent address=== -->
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address Line 1" id="pAddressLine1">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address Line 2" id="pAddressLine2">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Landmark" id="pLandmark">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Zip Code" id="pZipcode">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="City" id="pCity">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="State" id="pState">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="country" id="pCountry">
+                </div>
+                <!--=== Permanent address=== -->
+            </div>
+            <div class="col">
+                <h3 class="text-primary">Current Address</h3>
+                <div class="form-group">
+                    <input type="checkbox" id="checkBox" onclick="FillAddressInput()"> Same as permanent address
+                </div>
+
+
+
+                <!--=== current address=== -->
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address Line 1" id="curAddressLine1">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Address Line 2" id="curAddressLine2">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Landmark" id="curLandmark">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Zip Code" id="curZipcode">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="City" id="curCity">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="State" id="curState">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="country" id="curCountry">
+                </div>
+                <!--=== current address=== -->
+                <br>
+                <input type="button" id="button" value="Submit" onclick="formsubmittion3()">
+                
+
+            </div>
+
+        </div>
+
+    </div>`,
+        'declaration': `<div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Self Declaration Form</h1>
+            </div>
+            <div class="card-body">
+                <p>
+                    I, Shri/Smt.<textarea></textarea>, son/wife/daughter of Shri.<textarea></textarea>, age <textarea></textarea>, resident of <textarea></textarea> District<textarea></textarea> hereby declare that the information given above and in the
+                    enclosed documents is true to the best of my knowledge and belief and nothing has been concealed therein. I am well aware of the fact that if the information given by me is proved false/not true, I will have to face the punishment
+                    as per the law. Also, all the benefits availed by me shall be summarily withdrawn.
+
+                </p>
+            </div>
+            <div class="card-footer">
+                <span>Date </span>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <br>
+                <span>Sign</span>
+                <input type="file" id="file" name="file" required>
+
+                <br>
+                <input type="button" id="button" value="Submit" onclick="formsubmittion4()">
+
+
+            </div>
+        </div>
+    </div>`
+    };
+
+    function getPageContent(page) {
+        var contentToReturn;
+        switch (page) {
+            case 'personal':
+                contentToReturn = pages.personal;
+                break;
+            case 'educational':
+                contentToReturn = pages.educational;
+                break;
+            case 'address':
+                contentToReturn = pages.address;
+                break;
+            case 'declaration':
+                contentToReturn = pages.declaration;
+                break;
+            default:
+                contentToReturn = pages.personal;
+                break;
+        }
+        document.getElementById('content').innerHTML = contentToReturn;
+    }
+</script>
+
+<body onload="getPageContent('personal')">
+    <div style="width:10%; float: left;background: #eee;height: 100%; ">
+        <ul>
+            <li style="line-height: 50px;">
+                <a href="#" onclick="getPageContent('personal')">
+                    Personal Details
+                </a>
+            </li>
+            <li style="line-height: 50px;">
+                <a href="#" onclick="getPageContent('educational')">
+                    Educational Details
+                </a>
+            </li>
+            <li style="line-height: 50px;">
+                <a href="#" onclick="getPageContent('address')">
+                    Address Details
+                </a>
+            </li>
+            <li style="line-height: 50px;">
+                <a href="#" onclick="getPageContent('declaration')">
+                    Declaration form
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div style="width: 90%;float: right; background: #999;color:#fff; height: 721px;font-size: 20px;overflow: scroll;">
+        <p style="margin-left: 50px;" id="content">
+        <p>
+    </div>
+
+    <script src="js/registration.js"></script>
+    <script src="js/address.js"></script>
+    <script src="js/professional_details.js"></script>
+    <script src="js/declaration.js"></script>
+</body>
+
+</html>
